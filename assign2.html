@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            This is assignment2
+        </title>
+        <body background= "/home/noah/Pictures/free-html-web-page-backgrounds_12207.jpg">
+        <meta name="view point" content = "device-width,initial-scale=0.1">
+        <link href="/home/noah/INF 221/ASSIGN2/assign2.css" type="text/css"
+        rel="stylesheet" />
+         
+          
+            <br> 
+        <script>
+         function save(){
+            document.getElementById("myform")
+            var project = document.forms[0].elements[0].value;
+            var date = document.forms[0].elements[1].value;
+            var projectDiscription = document.forms[0].elements[2].value
+            var workexp = document.forms[0].elements[2].value
+
+            localStorage.setItem("projectName",project)
+            localStorage.setItem("projectDate",date)
+            localStorage.setItem("projectDescription",projectDiscription)
+            localStorage.setItem("workexp",workexp)
+
+        }
+        function getInfo(){
+            var project = localStorage.getItem('projectName')
+            var projectDate = localStorage.getItem('projectDate')
+            var projectDdescription = localStorage.getItem('projectDescription')
+            document.write(project+" "+projectDate+" "+projectDdescription)
+        }
+        console.log(localStorage)
+
+        </script>
+    </head>
+    <body>
+        <h3>FORM FOR USERS</h3>
+        <p>To be the user in this web page, you must fill in this form:</p>
+        <fieldset>
+            <form id="myform">
+                <h3>project   name:</h3> <input type= "text" value= "" id = "pgName" placeholder="">
+                <h3>start date:</h3> <input type = "date" value = "" id = "id" placeholder="">
+                <h3>enter you project desription bellow</h3> 
+                <textarea id="textVal" name="project description" cols="20" rows="4"></textarea> </br>
+              <h3> Your Work Experience:</h3>
+              <textarea id="textVal" name="project description" cols="20" rows="4"></textarea>
+            </fieldset>
+            <input type= "submit" id = "button" value="submit" onclick="save(), getinfo()">
+
+            <br><br>
+            <a href "file:///home/noah/INF%20221/ASSIGN2/anot.html" title="link for details">
+              
+                click to view the details 
+            </a>
+    </body>
+</html>

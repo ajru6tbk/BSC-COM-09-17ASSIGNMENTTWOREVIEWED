@@ -1,0 +1,23 @@
+
+body{
+    padding:20%;
+    background-color:none;
+}
+h4{
+    color: orange;
+    font: times;
+    border:2px greenyellow;
+    padding: 20%;
+    width: 52%;
+    height:5%;
+}
+div {
+    color: orange;
+    font: times;
+    border:2px rgb(248, 60, 13);
+    padding: 20%;
+    width: 20%;
+    height:15%; 
+    color:gainsboro 
+}
+
